@@ -1,0 +1,21 @@
+
+
+message Data{
+    required string className=1;
+    repeatable bytes data=2;
+}
+
+message Token{
+
+}
+
+message Service{
+ required string name=1;
+}
+
+message Invocation{
+    required Token token;
+    required Service service;
+    required string methodName;
+    repeatable Data parameters;
+}
